@@ -213,8 +213,6 @@ def print_menu(exits, room_items, inv_items):
         # Print the exit name and where it leads to
         print_exit(direction, exit_leads_to(exits, direction))
     for room_item in room_items:
-        print_exit(direction, exit_leads_to(exits, direction))
-    for room_item in room_items:
         print("TAKE", room_item['id'].upper(), " to take ", room_item['name'].upper(), "which weighs", room_item['weight'])
     for inv_item in inv_items:
         print("DROP", inv_item['id'].upper(), " to drop ", inv_item['name'].upper(), "which weighs", inv_item['weight'])
@@ -410,10 +408,8 @@ def main():
         execute_command(command)
         won = is_game_won()
         if won == True:
-            print("========================")
             print("Congratulations!")
             print("You have won the game")
-            print("========================")
 
 
 
